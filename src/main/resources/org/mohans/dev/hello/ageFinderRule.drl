@@ -1,0 +1,16 @@
+import org.mohans.dev.message.Message;
+import org.mohans.dev.action.Action;
+import org.mohans.dev.customer.Customer;
+
+//http://thomassundberg.wordpress.com/2012/10/11/jboss-drools-a-hello-world-example/
+rule "Customer is adult?"
+when
+  customer:Customer (age > 17)
+then
+  Action action = new Action();
+  Message message = new Message();
+  
+  message.setType( "Customer is ADULT" );
+  message.setMessageValue( customer.getAge() );
+  action.performAction(message) ;
+end

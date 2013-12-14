@@ -1,0 +1,12 @@
+import org.mohans.dev.message.Message;
+import org.mohans.dev.action.Action;
+
+//http://thomassundberg.wordpress.com/2012/10/11/jboss-drools-a-hello-world-example/
+rule "Act on high value in message"
+when
+  message:Message (messageValue > 17)
+then
+  Action action = new Action();
+  message.setType( "HIGH :" + message.getType() );
+  action.performAction(message) ;
+end

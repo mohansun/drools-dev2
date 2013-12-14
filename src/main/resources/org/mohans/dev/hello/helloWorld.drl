@@ -1,0 +1,8 @@
+import org.mohans.dev.message.Message;
+//http://thomassundberg.wordpress.com/2012/10/11/jboss-drools-a-hello-world-example/
+rule "Hello World"
+when
+  message:Message (type == 'Hello')
+then
+  message.printMessage();
+end
