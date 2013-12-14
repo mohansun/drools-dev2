@@ -1,4 +1,4 @@
-Maven project for Drool development
+Maven project for Drools development
 
 
 to run:
