@@ -1,4 +1,3 @@
-
 package org.mohans.dev;
 
 import org.drools.RuleBase;
@@ -24,6 +23,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 //http://www.kijanowski.eu/index.php?site=articles&article=introduction&lang=en
+// http://www.youtube.com/watch?v=4rYUYAYeQ1U
 
 public class HelloWorldRuleTest {
     private  String[] RULEFILES = {   "/org/mohans/dev/hello/helloWorld.drl"
